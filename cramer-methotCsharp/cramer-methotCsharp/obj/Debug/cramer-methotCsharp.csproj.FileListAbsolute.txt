@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\bin\Debug\cramer-methotCsharp.exe.config
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\bin\Debug\cramer-methotCsharp.exe
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\bin\Debug\cramer-methotCsharp.pdb
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer-methotCsharp.csprojAssemblyReference.cache
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer_methotCsharp.Form1.resources
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer_methotCsharp.Properties.Resources.resources
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer-methotCsharp.csproj.GenerateResource.cache
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer-methotCsharp.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer-methotCsharp.exe
+C:\Users\User\source\repos\cramer-methotCsharp\cramer-methotCsharp\obj\Debug\cramer-methotCsharp.pdb
