@@ -19,12 +19,6 @@ namespace WindowsFormsApp7
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-
-
-
-            
-
             int a = Convert.ToInt32(textBox1.Text);
             int b = Convert.ToInt32(textBox2.Text);
             int d = Convert.ToInt32(textBox3.Text);
@@ -34,6 +28,7 @@ namespace WindowsFormsApp7
             int n = Convert.ToInt32(textBox5.Text);
             int p = Convert.ToInt32(textBox7.Text);
             int g = Convert.ToInt32(textBox6.Text);
+            
 
             int[,] massiv = new int[3, 3]
             {
@@ -56,7 +51,7 @@ namespace WindowsFormsApp7
                 {g, p }
             };
 
-              int[,] minor_c = new int[2, 2]
+            int[,] minor_c = new int[2, 2]
             {
                 {d, k },
                 {g, n }
@@ -97,10 +92,10 @@ namespace WindowsFormsApp7
             };
 
             int[,] minor_p = new int[2, 2]
-          {
+            {
                 {a, b },
                 {d, k }
-          };
+            };
 
             // вычесляем миноры
             // ряд 0
@@ -127,58 +122,147 @@ namespace WindowsFormsApp7
                 {v_minor_d, v_minor_k, v_minor_f },
                 {v_minor_g, v_minor_n, v_minor_p }
             };
-            // Находим матрицу алгебраических дополнений
-            int[,] alg_dopol = new int[3, 3]
+
+            // опредилитель num
+
+            int opres = (v_minor_a * v_minor_k * v_minor_p + v_minor_b * v_minor_f * v_minor_g + v_minor_d * v_minor_c * v_minor_n) 
+                         -
+                        (v_minor_c * v_minor_k * v_minor_g + v_minor_b * v_minor_d * v_minor_p + v_minor_a * v_minor_f * v_minor_n);
+
+            /*
+            a b c  x1  00 01 02  a * k *p + g * b * f + n * d * c
+            d k f  x2  10 11 12  -
+            g n p  x3  20 12 22  c * k *g + b * d * p + a * f * n
+            */
+
+            if (opres ==0)
+            { label3.Text = Convert.ToString("нет обратной матрици "); }
+            else
             {
+                // Находим матрицу алгебраических дополнений
+                int[,] alg_dopol = new int[3, 3]
+                {
                 {v_minor_a, bb, v_minor_c },
                 {dd, v_minor_k, ff },
                 {v_minor_g, nn, v_minor_p }
-            };
+                };
 
-            //выводы в лэйблы
-                //minor
-                    // ряд 0
-            label5.Text = Convert.ToString(v_minor_a);
-            label6.Text = Convert.ToString(v_minor_b);
-            label7.Text = Convert.ToString(v_minor_c);
-                    // ряд 1
-            label10.Text = Convert.ToString(v_minor_d);
-            label9.Text = Convert.ToString(v_minor_k);
-            label8.Text = Convert.ToString(v_minor_f);
-                    // ряд 2
-            label13.Text = Convert.ToString(v_minor_g);
-            label12.Text = Convert.ToString(v_minor_n);
-            label11.Text = Convert.ToString(v_minor_p);
                 //матрица алгебраических дополнений
-                    // ряд 0
-            label22.Text = Convert.ToString(v_minor_a);
-            label21.Text = Convert.ToString(bb);
-            label20.Text = Convert.ToString(v_minor_c);
-                    // ряд 1
-            label19.Text = Convert.ToString(dd);
-            label18.Text = Convert.ToString(v_minor_k);
-            label17.Text = Convert.ToString(ff);
-                    // ряд 2
-            label16.Text = Convert.ToString(v_minor_g);
-            label15.Text = Convert.ToString(nn);
-            label14.Text = Convert.ToString(v_minor_p);
-
-
-            /*
-             a b c  x1  00 01 02
-             d k f  x2  10 11 12
-             g n p  x3  20 12 22
-            */
-            //находим определитель матрицы.
+                // ряд 0
+                label22.Text = Convert.ToString(v_minor_a);
+                label21.Text = Convert.ToString(bb);
+                label20.Text = Convert.ToString(v_minor_c);
+                // ряд 1
+                label19.Text = Convert.ToString(dd);
+                label18.Text = Convert.ToString(v_minor_k);
+                label17.Text = Convert.ToString(ff);
+                // ряд 2
+                label16.Text = Convert.ToString(v_minor_g);
+                label15.Text = Convert.ToString(nn);
+                label14.Text = Convert.ToString(v_minor_p);
 
 
 
+                // конечный результат
+                //находим Е
+                // ряд 0
+                int xa = (a * v_minor_a + b * dd + c * v_minor_g) / opres;
+                int xb = (a * bb + b * v_minor_k + c * nn) / opres;
+                int xc = (a * v_minor_c + b * ff + c * v_minor_p) / opres;
+                // ряд 1
+                int xd = (d * v_minor_a + k * dd + f * v_minor_g) / opres;
+                int xk = (d * bb + k * v_minor_k + f * nn) / opres;
+                int xf = (d * v_minor_c + k * ff + f * v_minor_p) / opres;
+                // ряд 2
+                int xg = (g * v_minor_a + n * dd + p * v_minor_g) / opres;
+                int xn = (g * bb + n * v_minor_k + p * nn) / opres;
+                int xp = (g * v_minor_c + n * ff + p * v_minor_p) / opres;
 
+                int[,] E = new int[3, 3]
+                {
+                {xa, xb, xc },
+                {xd, xk, xf },
+                {xg, xn, xp }
+                };
+
+                //выводы в лэйблы
+                //minor
+                // ряд 0
+                label5.Text = Convert.ToString(v_minor_a);
+                label6.Text = Convert.ToString(v_minor_b);
+                label7.Text = Convert.ToString(v_minor_c);
+                // ряд 1
+                label10.Text = Convert.ToString(v_minor_d);
+                label9.Text = Convert.ToString(v_minor_k);
+                label8.Text = Convert.ToString(v_minor_f);
+                // ряд 2
+                label13.Text = Convert.ToString(v_minor_g);
+                label12.Text = Convert.ToString(v_minor_n);
+                label11.Text = Convert.ToString(v_minor_p);
+
+                //матрица алгебраических дополнений
+                // ряд 0
+                label22.Text = Convert.ToString(v_minor_a);
+                label21.Text = Convert.ToString(bb);
+                label20.Text = Convert.ToString(v_minor_c);
+                // ряд 1
+                label19.Text = Convert.ToString(dd);
+                label18.Text = Convert.ToString(v_minor_k);
+                label17.Text = Convert.ToString(ff);
+                // ряд 2
+                label16.Text = Convert.ToString(v_minor_g);
+                label15.Text = Convert.ToString(nn);
+                label14.Text = Convert.ToString(v_minor_p);
+
+                //  масив Е
+                // ряд 0
+                label32.Text = Convert.ToString(xa);
+                label30.Text = Convert.ToString(xb);
+                label29.Text = Convert.ToString(xc);
+                // ряд 1
+                label28.Text = Convert.ToString(xd);
+                label27.Text = Convert.ToString(xk);
+                label26.Text = Convert.ToString(xf);
+                // ряд 2
+                label25.Text = Convert.ToString(xg);
+                label24.Text = Convert.ToString(xn);
+                label23.Text = Convert.ToString(xp);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // ряд 0
+            label5.Text = Convert.ToString("a");
+            label6.Text = Convert.ToString("b");
+            label7.Text = Convert.ToString("c");
+            // ряд 1
+            label10.Text = Convert.ToString("d");
+            label9.Text = Convert.ToString("k");
+            label8.Text = Convert.ToString("f");
+            // ряд 2
+            label13.Text = Convert.ToString("g");
+            label12.Text = Convert.ToString("n");
+            label11.Text = Convert.ToString("p");
+            //матрица алгебраических дополнений
+            // ряд 0
+            label22.Text = Convert.ToString("a");
+            label21.Text = Convert.ToString("b");
+            label20.Text = Convert.ToString("c");
+            // ряд 1
+            label19.Text = Convert.ToString("d");
+            label18.Text = Convert.ToString("k");
+            label17.Text = Convert.ToString("f");
+            // ряд 2
+            label16.Text = Convert.ToString("g");
+            label15.Text = Convert.ToString("n");
+            label14.Text = Convert.ToString("p");
+        }
     }
 }
+
