@@ -8,3 +8,13 @@ C:\Users\User\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Deb
 C:\Users\User\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.csproj.CoreCompileInputs.cache
 C:\Users\User\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.exe
 C:\Users\User\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.pdb
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\bin\Debug\stroim_grafik_kak_most.exe.config
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\bin\Debug\stroim_grafik_kak_most.exe
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\bin\Debug\stroim_grafik_kak_most.pdb
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.csprojResolveAssemblyReference.cache
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.Form1.resources
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.Properties.Resources.resources
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.csproj.GenerateResource.Cache
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.csproj.CoreCompileInputs.cache
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.exe
+D:\Users\g27803\source\repos\stroim_grafik_kak_most\stroim_grafik_kak_most\obj\Debug\stroim_grafik_kak_most.pdb
