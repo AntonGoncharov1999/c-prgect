@@ -8,3 +8,13 @@ d:\users\p27815\source\repos\WindowsFormsApp12\WindowsFormsApp12\obj\Debug\Windo
 d:\users\p27815\source\repos\WindowsFormsApp12\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.csproj.CoreCompileInputs.cache
 d:\users\p27815\source\repos\WindowsFormsApp12\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.exe
 d:\users\p27815\source\repos\WindowsFormsApp12\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.pdb
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe.config
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.exe
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\bin\Debug\WindowsFormsApp12.pdb
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.csprojAssemblyReference.cache
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.Form1.resources
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.Properties.Resources.resources
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.csproj.GenerateResource.cache
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.csproj.CoreCompileInputs.cache
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.exe
+E:\GitHab\c-prgect\transport-soft\WindowsFormsApp12\obj\Debug\WindowsFormsApp12.pdb
