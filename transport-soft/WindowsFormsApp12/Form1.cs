@@ -20,6 +20,8 @@ namespace WindowsFormsApp12
 
         private void Решить_Click(object sender, EventArgs e)
         {
+            //labels
+            int l1=0, l2=0, l3=0, l4=0, l5=0, l6=0, l7=0, l8=0;
             //поставщики
             int a = Convert.ToInt32(textBox1.Text);
             int b = Convert.ToInt32(textBox2.Text);
@@ -46,47 +48,53 @@ namespace WindowsFormsApp12
             int zapas = a + b;
 
             // massivs
-            int[] massiv_1 = new int[2] { a, b }; // 0 1 i
-            int[] massiv_2 = new int[4] { aa, bb, cc, dd }; // 0 1 2 3 4 j
-            int[,] massiv_3 = new int[2, 4]
+            int[] m_1 = new int[2] { a, b }; // 0 1 i
+            int[] m_2 = new int[4] { aa, bb, cc, dd }; // 0 1 2 3 4 j
+            int[,] m_3 = new int[2, 4]
                 {                                         // ij ij ij ij ij
                         { ab1, ab2, ab3, ab4 },           // 00 01 02 03 04
                         { aab1, aab2, aab3, aab4 }        // 10 11 12 13 14
                 };
 
+            int[,] m_4 = new int[2, 4]
+               {                                         
+                    {l1,l2,l3,l4 },
+                    {l5,l6,l7,l8 }       
+               };
+
             if (comboBox1.Text == "Северо-западного угла")
             {
                 int i = 0;
                 int j = 0;
-                // проход по массиву
+                int z = 0;
                 while (i < 2 && j < 4)
-                    
-                    {
-                        if (massiv_1[i] == 0) { i++; }
-                        if (massiv_2[j] == 0) { j++; }
-                        if (massiv_3[i, j] == 0) { i++; j++; }
-                        massiv_1[i] -= massiv_3[i, j];
-                        massiv_2[j] -= massiv_3[i,j];
-                    };
-                // считаю массив
-                int res = 0;
-                for(i = 0; i < 2; i++)
-                    {
-                        for (j = 0; j < 4; j++)
+                    {   
+                        int k = m_1[i] - m_2[j];
+                        if (k > 0)
                         {
-                            res += (massiv_3[i,j] * massiv_3[j,i]);
-                        };
-                    };
-                // 0
-                label17.Text = Convert.ToString(massiv_3[0, 0]);
-                label13.Text = Convert.ToString(massiv_3[0, 1]);
-                label15.Text = Convert.ToString(massiv_3[0, 2]);
-                label16.Text = Convert.ToString(massiv_3[0, 3]);
-                // 1
-                label21.Text = Convert.ToString(massiv_3[1, 0]);
-                label18.Text = Convert.ToString(massiv_3[1, 1]);
-                label19.Text = Convert.ToString(massiv_3[1, 2]);
-                label20.Text = Convert.ToString(massiv_3[1, 3]);
+                            m_4[i, j] = m_2[j];
+                            z = m_2[j] - m_2[j];
+                            if(z == 0){ j++; };
+                        }
+
+                        if(k < 0)
+                        {
+                            m_4[i, j] = m_2[j];
+                            z = m_1[i] - k;
+                            if(z > 0){ i++; }
+                        }
+                        if(k == 0) { m_4[i, j] = 0;}
+                    }
+                //0
+                label17.Text = Convert.ToString(l1);
+                label13.Text = Convert.ToString(l2);
+                label15.Text = Convert.ToString(l3);
+                label16.Text = Convert.ToString(l4);
+                //1
+                label21.Text = Convert.ToString(l5);
+                label18.Text = Convert.ToString(l6);
+                label19.Text = Convert.ToString(l7);
+                label20.Text = Convert.ToString(l8);
             }
 
             if (comboBox1.Text == "Наименьшей стоимости")
